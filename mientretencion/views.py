@@ -82,7 +82,7 @@ def formulario(request):
             messages.error(request, 'La contraseña debe ser iguales')
             return redirect('formulario')
         
-        user = User.objects.create(
+        user = User.objects.create_user(
             first_name=first_name,
             username=username,
             password=password,

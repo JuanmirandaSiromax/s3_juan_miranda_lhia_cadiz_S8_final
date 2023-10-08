@@ -59,7 +59,7 @@ def vista_juegos_api(request, id):
     
 @csrf_exempt
 @api_view(['GET', 'PUT','PATCH','DELETE'])    
-#@permission_classes((IsAuthenticated,))    
+@permission_classes((IsAuthenticated,))    
 def detalle_juego_api(request):
 
         return render(request, 'juegos/detalle_juego.html')
@@ -67,7 +67,7 @@ def detalle_juego_api(request):
 
 @csrf_exempt
 @api_view(['GET', 'PUT','PATCH','DELETE'])    
-#@permission_classes((IsAuthenticated,)) 
+@permission_classes((IsAuthenticated,)) 
 def personajes_juego_api(request):
 
     return render(request, 'juegos/personajes_juego.html')

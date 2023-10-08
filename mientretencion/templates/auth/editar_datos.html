@@ -59,16 +59,16 @@
                     
                     <div class="col-6 mb-3">
                         <label for="" class="form-label"> Ingrese Correo Electronico </label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="{{user.email}}">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="{{usuario.email}}">
                         <small class="text-danger" id="Correo-error"> </small>
                     </div>
                     <div class="col-6 mb-3">
                         <label for="role">Rol:</label>
                         <select id="role" name="role" class="form-control">
-                        <option value="admin" {% if user_profile.role == 'admin' %}selected{% endif %}>Administrador</option>
+                        <option selected>Seleccione un rol</option>
                         <option value="cliente" {% if user_profile.role == 'cliente' %}selected{% endif %}>Cliente</option>
-                              
-                            </select>
+                        <option value="admin" {% if user_profile.role == 'admin' %}selected{% endif %}>Administrador</option>      
+                        </select>
                     </div>
                     <center>
                         <div class="d-grid" class="mb-3">
